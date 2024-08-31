@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+
+#container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 80vw 20vw;
+  grid-template-rows: 10vh 90vh;
+
+  grid-template-areas: " header header" "main side";
+}
+#header {
+  background-color: #7e6551;
+  grid-area: header;
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  color: #ccc7b9;
+  padding: 2rem;
+}
+#main {
+  background-color: #ccc7b9;
+  grid-area: main;
+
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(6, 250px);
+  grid-template-rows: repeat(autofill, 20%);
+}
+#side {
+  background-color: #7e6551;
+  grid-area: side;
+}
+
+.book-card:first-of-type {
+  display: none;
+}
+
+.book-card {
+  width: 200px;
+  height: 200px;
+  background-color: #7e6551;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: #acb1a7;
+
+  padding: 1rem;
+
+  gap: 1rem;
+
+  border-radius: 1rem;
+  box-shadow: 5px 5px 5px rgb(171, 171, 171);
+
+  button {
+    width: 4rem;
+    height: 3rem;
+    color: #eaf9d9;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 3px rgb(79, 76, 76);
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.removeButton {
+  background-color: #466362;
+}
+
+.read {
+  background-color: #466362;
+}
+.unread {
+  background-color: #ccc7b9;
+}
+
+input[type="text"]:user-invalid,
+input[type="number"]:user-invalid {
+  border: 3px solid red;
+}
+
+input[type="text"],
+input[type="number"] {
+  appearance: textfield;
+  border: none;
+  width: 70%;
+  height: 100%;
+}
+
+input[type="radio"] {
+  width: 1rem;
+}
+#radio-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+#new-book-form-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+  padding: 2rem;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+legend {
+  font-size: 1.5rem;
+  color: #ccc7b9;
+  margin-bottom: 1rem;
+}
+label {
+  font-size: 1.2rem;
+  color: #ccc7b9;
+}
+
+#addBookButton {
+  width: 6rem;
+  height: 3rem;
+  color: #eaf9d9;
+  background-color: #466362;
+
+  border-radius: 1rem;
+  box-shadow: 3px 3px 3px rgb(79, 76, 76);
+}
