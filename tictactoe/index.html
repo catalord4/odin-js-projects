@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <side id="left-player">
+      <h2 class="player-name">Player 1</h2>
+      <h3 class="turn-status">It's your turn!</h3>
+    </side>
+
+    <main id="gameboard">
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+      <div class="gamesquare"></div>
+    </main>
+
+    <side id="right-player">
+      <h2 class="player-name">Player 2</h2>
+      <h3 class="turn-status">Waiting for your turn...</h3>
+    </side>
+
+    <div id="game-start-modal">
+      <div id="right-player-input">
+        <h2>X will be</h2>
+        <input type="text" id="left-player-name" />
+      </div>
+      <button id="start-game-button">Start Game</button>
+      <div id="left-player-input">
+        <h2>O will be</h2>
+        <input type="text" id="right-player-name" />
+      </div>
+    </div>
+    <div id="game-end-modal">
+      <h2 id="game-result-text"><span>Player 1</span></h2>
+      <button id="game-restart-button">Play Again</button>
+    </div>
+    <div id="overlay"></div>
+  </body>
+</html>

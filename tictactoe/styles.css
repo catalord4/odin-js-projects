@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  background-color: #d3d3d3;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Varela Round", sans-serif;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2rem;
+
+  /* background-color: rgb(173, 173, 173); */
+  width: 40vw;
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  padding: 1rem;
+
+  border-radius: 5%;
+  /* box-shadow: 5px 5px 5px #656365; */
+}
+
+.gamesquare {
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px #aaadaa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+side {
+  align-self: flex-start;
+  margin: 20vh;
+  padding: 2rem;
+
+  background-color: white;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px #aaadaa;
+
+  width: 20vw;
+  height: 30vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+#left-player h2 {
+  color: #1597d5;
+}
+
+#right-player h2 {
+  color: #ffd302;
+}
+
+img {
+  width: 90%;
+  height: 90%;
+}
+
+#overlay {
+  display: flex;
+  position: fixed;
+  background-color: black;
+  opacity: 0.5;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+#game-start-modal {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+
+  background-color: #d3d3d3;
+  border-radius: 5vh;
+  width: 50vw;
+  height: 40vh;
+  padding: 3rem;
+
+  justify-content: space-around;
+}
+
+#right-player-input,
+#left-player-input {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+#right-player-input h2 {
+  color: #1597d5;
+}
+#left-player-input h2 {
+  color: #ffd302;
+}
+
+#start-game-button {
+  align-self: flex-end;
+  justify-self: center;
+  font-size: 1.8rem;
+  width: 30%;
+  height: 20%;
+  border: none;
+
+  background-color: #1597d5;
+  color: white;
+  border-radius: 4rem;
+  box-shadow: 5px 5px 5px #aaadaa;
+
+  font-family: "Varela Round", sans-serif;
+}
+
+#start-game-button:active {
+  background-color: #ffd302;
+}
+
+input {
+  border: none;
+  background-color: white;
+  border-radius: 5vh;
+  box-shadow: 5px 5px 5px #aaadaa;
+
+  padding: 2rem;
+  font-size: 1.5rem;
+
+  width: 15vw;
+  height: 5vh;
+}
+
+input:focus {
+  outline: none;
+}
+
+#game-end-modal {
+  position: fixed;
+  z-index: 1;
+  display: none;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  background-color: #d3d3d3;
+  border-radius: 5vh;
+  width: 30vw;
+  height: 30vh;
+}
+
+#game-restart-button {
+  font-size: 1.5rem;
+  width: 30%;
+  height: 20%;
+  border: none;
+
+  background-color: #1597d5;
+  color: white;
+  border-radius: 4rem;
+  box-shadow: 5px 5px 5px #aaadaa;
+
+  font-family: "Varela Round", sans-serif;
+}
